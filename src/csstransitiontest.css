@@ -1,0 +1,24 @@
+.fade-enter,.fade-appear{
+  /* 入场动画 */
+  opacity: 0;
+}
+.fade-enter-active,.fade-appear-active{
+  /* 入场中动画 */
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.fade-enter-done{
+  opacity: 1;
+}
+.fade-exit{
+  /* 出场动画 */
+  opacity: 1;
+}
+.fade-exit-active{
+  /* 出场中动画 */
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.fade-exit-done{
+  opacity: 0;
+}
