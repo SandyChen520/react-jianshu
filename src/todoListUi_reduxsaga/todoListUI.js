@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
 import {Input, Button, List} from 'antd';
 const TodoListUI = (props) => { //无状态组件，性能比较优
@@ -19,7 +19,7 @@ const TodoListUI = (props) => { //无状态组件，性能比较优
         bordered
         style={{marginTop: '10px', width:'300px'}}
         dataSource={props.list}
-        renderItem={(item,index) => (<List.Item onClick={(index) => {props.handleItemDetele(index)}}>{item}</List.Item>)}
+        renderItem={(item,index) => (<List.Item onClick={() => {props.handleItemDetele(index)}}>{item}</List.Item>)}
       />
     </div>
   )
