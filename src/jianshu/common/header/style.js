@@ -42,9 +42,36 @@ export const NavItem = styled.div`
 
 export const SearchWrapper = styled.div`
   float: left;
-  
+  position:relative;
 `;
+export const SearchInfo = styled.div`
+  position:absolute;
+  left:0;
+  top:56px;
+  width:180px;
+  height:100px;
+  padding:10px 15px;
+  box-shadow: 0 0 10px 0 #ccc;
+  background:#fff;
+`;
+export const SearchInfoTitle = styled.div`
+  font-size:14px;
+  color:#999;
+  line-height:32px;
+`;
+export const SearchInfoSwitch = styled.span`
+  float:right;
+  font-size:13px;
+`;
+export const SearchInfoItem = styled.a`
+  display:block;
+  float:left;
+  padding:5px;
+  border:1px solid #ccc;
+  margin:0 10px 10px 0;
+  font-size:12px;
 
+`;
 export const NavSearch = styled.input.attrs({
   placeholder: '搜索'
 })`
