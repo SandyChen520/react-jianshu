@@ -44,4 +44,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.clearfix{
+	zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+	height: 0;
+}
 `;
