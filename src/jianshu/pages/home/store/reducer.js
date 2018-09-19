@@ -1,16 +1,18 @@
 import * as actionTypes from './actionTypes';
 import {fromJS} from 'immutable';
 const defaultState = fromJS({
-  topicList: [{
-    id:1,
-    item: '热点'
-  },{
-    id:2,
-    item: '热点'
-  }]
+  topicList: [],
+  articleList: [],
+  recommend: []
 })
 export default (state = defaultState, action) => {
-  switch(action.types) {
+  switch(action.type) {
+    case actionTypes.SET_LIST_DATA:
+      return  state.merge({
+        topicList: fromJS(action.data.topicList),
+        articleList: fromJS(action.data.articleList),
+        recommend: fromJS(action.data.recommend)
+      })
     default: return state;
   }
 } 
